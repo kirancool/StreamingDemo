@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:lang="http://www.springframework.org/schema/lang"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+				http://www.springframework.org/schema/beans/spring-beans.xsd
+				http://www.springframework.org/schema/aop
+				http://www.springframework.org/schema/aop/spring-aop.xsd
+				http://www.springframework.org/schema/context
+				http://www.springframework.org/schema/context/spring-context.xsd
+				http://www.springframework.org/schema/jee
+				http://www.springframework.org/schema/jee/spring-jee.xsd
+				http://www.springframework.org/schema/lang
+				http://www.springframework.org/schema/lang/spring-lang.xsd
+				http://www.springframework.org/schema/tx
+				http://www.springframework.org/schema/tx/spring-tx.xsd
+				http://www.springframework.org/schema/util
+				http://www.springframework.org/schema/util/spring-util.xsd
+				http://www.springframework.org/schema/mvc
+				http://www.springframework.org/schema/mvc/spring-mvc.xsd
+				http://www.springframework.org/schema/data/mongo
+				http://www.springframework.org/schema/data/mongo/spring-mongo.xsd">
+  
+	 <context:component-scan  base-package="com.gridedge.twitter" />
+	
+	<mvc:annotation-driven />
+		<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		
+		<property name="locations">
+			<list>
+		
+			</list>
+		</property>
+	</bean>
+
+	<bean id="mappingContext"
+		class="org.springframework.data.mongodb.core.mapping.MongoMappingContext" />
+
+	<bean id="defaultMongoTypeMapper"
+		class="org.springframework.data.mongodb.core.convert.DefaultMongoTypeMapper">
+		<constructor-arg name="typeKey">
+			<null />
+		</constructor-arg>
+	</bean>
+
+	<mongo:mongo-client id="mongoClient"
+		host="localhost" port="27017">
+		<mongo:client-options connections-per-host="1"
+			connect-timeout="30"
+			max-wait-time="5" />
+	</mongo:mongo-client>
+
+	<bean id="simpleMongoDbFactory"
+		class="org.springframework.data.mongodb.core.SimpleMongoDbFactory">
+		<constructor-arg ref="mongoClient" />
+		<constructor-arg name="databaseName"
+			value="Twitter" />
+	</bean>
+
+	<bean id="mappingMongoConverter"
+		class="org.springframework.data.mongodb.core.convert.MappingMongoConverter">
+		<constructor-arg name="mongoDbFactory" ref="simpleMongoDbFactory" />
+		<constructor-arg name="mappingContext" ref="mappingContext" />
+		<property name="typeMapper" ref="defaultMongoTypeMapper" />
+	</bean>
+
+	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+		<constructor-arg ref="simpleMongoDbFactory" />
+		<constructor-arg name="mongoConverter" ref="mappingMongoConverter" />
+	</bean>
+	<mongo:repositories base-package="com.gridedge.twitter.dao"
+		mongo-template-ref="mongoTemplate" />
+
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	</bean>
+ 	<!-- <bean id="producer"
+		class="com.gridedge.twitter.kafka.Producer">
+		<constructor-arg ref="consumer" />
+	</bean>
+	<bean id="consumer"
+		class="com.gridedge.twitter.kafka.Consumer">
+	</bean> -->
+	<bean id="sparkInfo" class="com.gridedge.twitter.common.SparkInfo">
+
+        <property name="appName" value="StreamingDemo"></property>
+        <property name="master" value="local[*]"></property>
+        <property name="dynamicAllocation" value="false"></property>
+        <property name="executorInstances" value="2"></property>
+        <property name="executorMemory" value="256m"></property>
+        <property name="executorCores" value="1"></property>
+        <property name="executorCoresMax" value="2"></property>
+        <property name="taskCpus" value="2"></property>
+        <property name="executorClassPath" value="/home/yarn/bmlib/*"></property>
+        <property name="yarnJar" value="file:///app/spark-1.5.0-bin-hadoop2.6/lib/spark-assembly-1.5.0-hadoop2.6.0.jar"></property>
+        <property name="yarnQueue" value="root.root"></property>
+        <property name="memoryFraction" value="0.4"></property>  
+        </bean> 
+        
+ 
+ 	
+	<!-- 
+    <bean id = "twitterDataServiceImpl" class = "com.gridedge.twitter.services.TwitterServiceImpl">
+    </bean>  
+   -->
+
+</beans>

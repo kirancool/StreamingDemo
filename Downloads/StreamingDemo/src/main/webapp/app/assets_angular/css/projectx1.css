@@ -1,0 +1,340 @@
+
+body{
+          
+     overflow-x: hidden;
+  }
+  
+ a:hover, a:focus {
+    
+    text-decoration: none     
+}
+
+.x_title {
+/*   border-bottom: 2px solid #E6E9ED; */
+  padding: 1px 5px 6px;
+  margin-bottom: 10px;
+}
+
+.x_panel {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 0px 43px 5px 0px;
+  display: inline-block;
+  background: #fff;
+  
+  border: 1px solid #C8C8C8;
+  border-radius: 5px;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  column-break-inside: avoid;
+  opacity: 1;
+  -moz-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  -webkit-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.clearfix:after, form:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.x_content {
+ /*  padding: 0 5px 6px; */
+  position: relative;
+  width: 100%;
+  float: left;
+  clear: both;
+  /* margin-top: 5px; */
+}
+
+div.container_body{
+	
+	background: #F7F7F7;
+	
+} 
+
+
+
+
+
+
+ 
+/*-----------Start Left Container-----------*/ 
+  
+div.left_container {
+    width: 225px;
+    height: 803px;
+    background: #5E5E5E;
+    float: left;
+    opacity: 0.9;
+    font-family: 'Abel', serif;
+    
+}
+
+.left_title{
+       
+    width:100px;
+    color:#4AD9D9;
+    height: 49px;
+    top: 15px;
+    left: 60px;
+    position:relative;
+    font-size: 14px;
+    
+    
+}
+
+.menu_section {
+ /*margin-bottom: 35px;*/
+ /* padding-left: 45px;*/
+  padding-top: 40px;
+ 
+} 
+
+      
+.menu_section >ul {
+  margin-top: 10px;	
+  width:225px;
+  font-weight: bold;    
+  height:auto;
+  color:white;
+  background-color:#5E5E5E;
+  text-align: justify;
+  padding-left:0px;
+}
+
+.menu_section >ul li {
+  /*   border-top: 1px solid; */
+    padding: 0px 0px 0px 0px; 
+  
+ } 
+
+.menu_section >ul li:hover{
+	
+	
+	background:#1AD5FD;
+}
+.menu_section >ul li.menuactive {
+    background-color:#1AD5FD;
+}
+
+       
+.menu_section >ul li.menudefault {
+	
+ background-color:#5E5E5Esss;	
+	
+	
+}
+
+.menu_section >ul hr{
+   margin-top: 4px;
+   margin-bottom: 7px;
+   border-color:#4AD9D9;
+ }   
+ 
+
+.menu_section >ul a{
+      padding: 0px 70px 8px 23px;
+
+  
+ }
+ 
+ 
+.menu_section .fa{
+    padding-left:24px;
+    width: 36px;
+    color:#BABABA;
+    opacity: .99;
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    -webkit-font-smoothing: antialiased;          
+}
+  
+  
+ .menu_section span{
+           
+   padding-left:21px;
+   font-size: 16px;       
+ }  
+
+/*-----------End Left Container-----------*/ 
+
+
+
+/*-----------Start top_container-----------*/ 
+
+div.top_container {
+    margin-left:225px;
+    height: 50px;
+    background: #5E5E5E;
+    opacity: 0.7;
+    font-family: 'Abel', serif;
+}
+
+.top_title {
+    
+    color: #FFFFFF;
+    font-size: 16px;
+    position: absolute;
+    left: 240px;
+    top: 15px;
+    
+   }      
+      
+.top_title .fa{
+ font-size:24px;    
+}
+
+.top_setting{
+    
+    color: white;
+    position: absolute;
+    left: 1238px;
+    top: 15px;
+ }
+
+
+/*-----------End top_container-----------*/ 
+
+
+
+
+
+
+/*-----------Start right_container-----------*/
+
+div.right_container {
+    margin-left:225px;
+    background: #F7F7F7;
+    /*min-height: 755px;*/
+}
+
+
+.container{      
+ 
+  width: 90%;
+  margin-top: 50px;
+     } 
+     
+.content{
+ 
+    min-height: 50px;
+    height:auto;
+    background-color: white;
+    border: 1px solid #C8C8C8;
+    border-radius: 5px;
+    margin: 13px 0px 0px 0px;
+ } 
+
+/*-----------End right_container-----------*/
+
+
+
+
+/*-----------Start Dashboard Page-----------*/  
+
+.card_block{
+	
+	width: 200px;
+    border: 2px solid #C8C8C8;
+    margin: 20px;
+   /*  background-color: #4AD9D9; */
+    opacity: 0.5;
+	
+	
+}
+
+.card_block >hr{
+	
+	margin:12px;
+	border: 1px solid #8A8A8A
+}
+
+.card_block >p{
+	
+	font-size:24px;
+	font-weight:bold;
+	font-family: 'Abel', serif;
+	padding: 0px;
+    margin: 5px 0px 5px 0px;
+}
+
+.card_high{
+	
+	background-color:#4AD9D9;
+}
+
+.card_medium{
+	
+	
+	background-color:green;
+}
+
+.card_low{
+	
+	
+	background-color:red;
+}
+	
+	
+
+.mdcarddiv{
+	
+	min-height: 50px;
+    height: auto;
+    background-color: white;
+    border: 1px solid #C8C8C8;
+    border-radius: 5px;
+    padding: 9px 0px 9px 0px;
+}
+
+.mdcarddivp{
+	font-size:24px;
+	font-weight:bold;
+	font-family: 'Abel', serif;
+	padding: 0px;
+    margin: 5px 0px 5px 0px;
+	
+	
+}
+
+.mdcarddivhr{
+	margin-top: 0px;
+    margin-bottom: 0px;
+    border: 0;
+    border-top: 2px solid #8A8A8A;
+	
+	
+}		
+	
+/*-----------End Dashboard Page-----------*/  	
+	
+	
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+      
+      
+  
+ 
+      

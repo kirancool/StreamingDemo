@@ -1,0 +1,97 @@
+.card {
+	
+	/*display :block   !important;*/
+	
+}
+.c3-circle {
+     stroke-width: 1px;
+    stroke: #fff;
+    fill :'red'; 
+}
+
+.tooltiptext {
+   
+    
+    border-radius: 0px 0px 6px 6px;
+    padding :0px 23px 3px 23px;
+    width:80px;
+    background-color: black;
+    text-align:center; 
+    vertical-align:middle;
+}
+
+.tooltipheader {
+   
+    /*
+    top: 100%;
+    left: 50%;
+     */
+    margin-left: -5px;
+    border-radius: 6px 6px 0 0;
+    padding :3px 3px 0 3px;
+    font-size: 13px;
+    width:80px;
+    
+    background-color: black;
+}
+
+
+  
+ 
+ 
+  #usercard .c3-line{
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+} 
+
+  #twittercard .c3-line{
+  stroke-dasharray: 7,7;
+  animation: mymove 10s linear;
+  stroke-width: 5px;
+}
+
+@keyframes mymove {
+  from {
+    stroke-dashoffset: 0%;
+  }
+  
+  to {
+    stroke-dashoffset: 100%;
+  }
+}
+ 
+
+/* .c3-circle {
+    fill: red !important;
+} */
+/* .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+ */

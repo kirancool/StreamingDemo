@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Wed Nov 09 17:13:20 IST 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-0158-48e6-448e-00001b669928 
+on database directory /home/rohit/angular-twitter/StreamingDemo/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@1d686622 
+Loaded from file:/home/rohit/.m2/repository/org/apache/derby/derby/10.10.2.0/derby-10.10.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_111-b14
+user.dir=/home/rohit/angular-twitter/StreamingDemo
+os.name=Linux
+os.arch=amd64
+os.version=4.2.0-42-generic
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

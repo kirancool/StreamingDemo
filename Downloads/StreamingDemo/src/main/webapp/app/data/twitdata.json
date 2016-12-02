@@ -1,0 +1,351 @@
+[{
+			"created_at": "Mon Oct 17 13:01:38 +0000 2016",
+			"id": 788002028089901056,
+			"id_str": "788002028089901056",
+			"text": "#Twitter #change #gamer #gamergirl #pcgamer #gamergirls #google #apple #english #australia #melbourne https:\/\/t.co\/K7fjdBzkdQ",
+			"display_text_range": [0, 101],
+			"source": "\u003ca href=\"https:\/\/www.socialoomph.com\" rel=\"nofollow\"\u003eSocialOomph\u003c\/a\u003e",
+			"truncated": false,
+			"in_reply_to_status_id": null,
+			"in_reply_to_status_id_str": null,
+			"in_reply_to_user_id": null,
+			"in_reply_to_user_id_str": null,
+			"in_reply_to_screen_name": null,
+			"user": {
+				"id": 717594686324539392,
+				"id_str": "717594686324539392",
+				"name": "Compare Edu $$$",
+				"screen_name": "compare_edu",
+				"location": "Australia",
+				"url": "http:\/\/www.compareeducationcosts.com.au",
+				"description": "FREE PUBLIC SEARCH, NO LOGINS OR BROKERS! Our goal is to provide Clear and Easy Access to educational information for both Local & International students.",
+				"protected": false,
+				"verified": false,
+				"followers_count": 107,
+				"friends_count": 49,
+				"listed_count": 54,
+				"favourites_count": 46,
+				"statuses_count": 152594,
+				"created_at": "Wed Apr 06 06:08:00 +0000 2016",
+				"utc_offset": -25200,
+				"time_zone": "Pacific Time (US & Canada)",
+				"geo_enabled": false,
+				"lang": "en",
+				"contributors_enabled": false,
+				"is_translator": false,
+				"profile_background_color": "F5F8FA",
+				"profile_background_image_url": "",
+				"profile_background_image_url_https": "",
+				"profile_background_tile": false,
+				"profile_link_color": "2B7BB9",
+				"profile_sidebar_border_color": "C0DEED",
+				"profile_sidebar_fill_color": "DDEEF6",
+				"profile_text_color": "333333",
+				"profile_use_background_image": true,
+				"profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/717595168208134144\/NTKT1YNO_normal.jpg",
+				"profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/717595168208134144\/NTKT1YNO_normal.jpg",
+				"profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/717594686324539392\/1461732106",
+				"default_profile": true,
+				"default_profile_image": false,
+				"following": null,
+				"follow_request_sent": null,
+				"notifications": null
+			},
+			"geo": null,
+			"coordinates": null,
+			"place": null,
+			"contributors": null,
+			"is_quote_status": false,
+			"retweet_count": 0,
+			"favorite_count": 0,
+			"entities": {
+				"hashtags": [{
+					"text": "Twitter",
+					"indices": [0, 8]
+				}, {
+					"text": "change",
+					"indices": [9, 16]
+				}, {
+					"text": "gamer",
+					"indices": [17, 23]
+				}, {
+					"text": "gamergirl",
+					"indices": [24, 34]
+				}, {
+					"text": "pcgamer",
+					"indices": [35, 43]
+				}, {
+					"text": "gamergirls",
+					"indices": [44, 55]
+				}, {
+					"text": "google",
+					"indices": [56, 63]
+				}, {
+					"text": "apple",
+					"indices": [64, 70]
+				}, {
+					"text": "english",
+					"indices": [71, 79]
+				}, {
+					"text": "australia",
+					"indices": [80, 90]
+				}, {
+					"text": "melbourne",
+					"indices": [91, 101]
+				}],
+				"urls": [],
+				"user_mentions": [],
+				"symbols": [],
+				"media": [{
+					"id": 788002025799872512,
+					"id_str": "788002025799872512",
+					"indices": [102, 125],
+					"media_url": "http:\/\/pbs.twimg.com\/media\/Cu-Lqt4W8AAqzBZ.jpg",
+					"media_url_https": "https:\/\/pbs.twimg.com\/media\/Cu-Lqt4W8AAqzBZ.jpg",
+					"url": "https:\/\/t.co\/K7fjdBzkdQ",
+					"display_url": "pic.twitter.com\/K7fjdBzkdQ",
+					"expanded_url": "https:\/\/twitter.com\/compare_edu\/status\/788002028089901056\/photo\/1",
+					"type": "photo",
+					"sizes": {
+						"large": {
+							"w": 614,
+							"h": 612,
+							"resize": "fit"
+						},
+						"small": {
+							"w": 614,
+							"h": 612,
+							"resize": "fit"
+						},
+						"thumb": {
+							"w": 150,
+							"h": 150,
+							"resize": "crop"
+						},
+						"medium": {
+							"w": 614,
+							"h": 612,
+							"resize": "fit"
+						}
+					}
+				}]
+			},
+			"extended_entities": {
+				"media": [{
+					"id": 788002025799872512,
+					"id_str": "788002025799872512",
+					"indices": [102, 125],
+					"media_url": "http:\/\/pbs.twimg.com\/media\/Cu-Lqt4W8AAqzBZ.jpg",
+					"media_url_https": "https:\/\/pbs.twimg.com\/media\/Cu-Lqt4W8AAqzBZ.jpg",
+					"url": "https:\/\/t.co\/K7fjdBzkdQ",
+					"display_url": "pic.twitter.com\/K7fjdBzkdQ",
+					"expanded_url": "https:\/\/twitter.com\/compare_edu\/status\/788002028089901056\/photo\/1",
+					"type": "photo",
+					"sizes": {
+						"large": {
+							"w": 614,
+							"h": 612,
+							"resize": "fit"
+						},
+						"small": {
+							"w": 614,
+							"h": 612,
+							"resize": "fit"
+						},
+						"thumb": {
+							"w": 150,
+							"h": 150,
+							"resize": "crop"
+						},
+						"medium": {
+							"w": 614,
+							"h": 612,
+							"resize": "fit"
+						}
+					}
+				}]
+			},
+			"favorited": false,
+			"retweeted": false,
+			"possibly_sensitive": false,
+			"filter_level": "low",
+			"lang": "und",
+			"timestamp_ms": "1476709298523"
+		},
+		
+		{
+			"created_at": "Mon Oct 17 13:01:38 +0000 2016",
+			"id": 788002028089901056,
+			"id_str": "788002028089901056",
+			"text": "#Twitter #change #gamer #gamergirl #pcgamer #gamergirls #google #apple #english #australia #melbourne https:\/\/t.co\/K7fjdBzkdQ",
+			"display_text_range": [0, 101],
+			"source": "\u003ca href=\"https:\/\/www.socialoomph.com\" rel=\"nofollow\"\u003eSocialOomph\u003c\/a\u003e",
+			"truncated": false,
+			"in_reply_to_status_id": null,
+			"in_reply_to_status_id_str": null,
+			"in_reply_to_user_id": null,
+			"in_reply_to_user_id_str": null,
+			"in_reply_to_screen_name": null,
+			"user": {
+				"id": 717594686324539392,
+				"id_str": "717594686324539392",
+				"name": "jitender",
+				"screen_name": "compare_edu",
+				"location": "India",
+				"url": "http:\/\/www.compareeducationcosts.com.au",
+				"description": "FREE PUBLIC SEARCH, NO LOGINS OR BROKERS! Our goal is to provide Clear and Easy Access to educational information for both Local & International students.",
+				"protected": false,
+				"verified": false,
+				"followers_count": 107,
+				"friends_count": 49,
+				"listed_count": 54,
+				"favourites_count": 46,
+				"statuses_count": 152594,
+				"created_at": "Wed Apr 06 06:08:00 +0000 2016",
+				"utc_offset": -25200,
+				"time_zone": "Pacific Time (US & Canada)",
+				"geo_enabled": false,
+				"lang": "en",
+				"contributors_enabled": false,
+				"is_translator": false,
+				"profile_background_color": "F5F8FA",
+				"profile_background_image_url": "",
+				"profile_background_image_url_https": "",
+				"profile_background_tile": false,
+				"profile_link_color": "2B7BB9",
+				"profile_sidebar_border_color": "C0DEED",
+				"profile_sidebar_fill_color": "DDEEF6",
+				"profile_text_color": "333333",
+				"profile_use_background_image": true,
+				"profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/717595168208134144\/NTKT1YNO_normal.jpg",
+				"profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/717595168208134144\/NTKT1YNO_normal.jpg",
+				"profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/717594686324539392\/1461732106",
+				"default_profile": true,
+				"default_profile_image": false,
+				"following": null,
+				"follow_request_sent": null,
+				"notifications": null
+			},
+			"geo": null,
+			"coordinates": null,
+			"place": null,
+			"contributors": null,
+			"is_quote_status": false,
+			"retweet_count": 0,
+			"favorite_count": 0,
+			"entities": {
+				"hashtags": [{
+					"text": "Twitter",
+					"indices": [0, 8]
+				}, {
+					"text": "change",
+					"indices": [9, 16]
+				}, {
+					"text": "gamer",
+					"indices": [17, 23]
+				}, {
+					"text": "gamergirl",
+					"indices": [24, 34]
+				}, {
+					"text": "pcgamer",
+					"indices": [35, 43]
+				}, {
+					"text": "gamergirls",
+					"indices": [44, 55]
+				}, {
+					"text": "google",
+					"indices": [56, 63]
+				}, {
+					"text": "apple",
+					"indices": [64, 70]
+				}, {
+					"text": "english",
+					"indices": [71, 79]
+				}, {
+					"text": "australia",
+					"indices": [80, 90]
+				}, {
+					"text": "melbourne",
+					"indices": [91, 101]
+				}],
+				"urls": [],
+				"user_mentions": [],
+				"symbols": [],
+				"media": [{
+					"id": 788002025799872512,
+					"id_str": "788002025799872512",
+					"indices": [102, 125],
+					"media_url": "http:\/\/pbs.twimg.com\/media\/Cu-Lqt4W8AAqzBZ.jpg",
+					"media_url_https": "https:\/\/pbs.twimg.com\/media\/Cu-Lqt4W8AAqzBZ.jpg",
+					"url": "https:\/\/t.co\/K7fjdBzkdQ",
+					"display_url": "pic.twitter.com\/K7fjdBzkdQ",
+					"expanded_url": "https:\/\/twitter.com\/compare_edu\/status\/788002028089901056\/photo\/1",
+					"type": "photo",
+					"sizes": {
+						"large": {
+							"w": 614,
+							"h": 612,
+							"resize": "fit"
+						},
+						"small": {
+							"w": 614,
+							"h": 612,
+							"resize": "fit"
+						},
+						"thumb": {
+							"w": 150,
+							"h": 150,
+							"resize": "crop"
+						},
+						"medium": {
+							"w": 614,
+							"h": 612,
+							"resize": "fit"
+						}
+					}
+				}]
+			},
+			"extended_entities": {
+				"media": [{
+					"id": 788002025799872512,
+					"id_str": "788002025799872512",
+					"indices": [102, 125],
+					"media_url": "http:\/\/pbs.twimg.com\/media\/Cu-Lqt4W8AAqzBZ.jpg",
+					"media_url_https": "https:\/\/pbs.twimg.com\/media\/Cu-Lqt4W8AAqzBZ.jpg",
+					"url": "https:\/\/t.co\/K7fjdBzkdQ",
+					"display_url": "pic.twitter.com\/K7fjdBzkdQ",
+					"expanded_url": "https:\/\/twitter.com\/compare_edu\/status\/788002028089901056\/photo\/1",
+					"type": "photo",
+					"sizes": {
+						"large": {
+							"w": 614,
+							"h": 612,
+							"resize": "fit"
+						},
+						"small": {
+							"w": 614,
+							"h": 612,
+							"resize": "fit"
+						},
+						"thumb": {
+							"w": 150,
+							"h": 150,
+							"resize": "crop"
+						},
+						"medium": {
+							"w": 614,
+							"h": 612,
+							"resize": "fit"
+						}
+					}
+				}]
+			},
+			"favorited": false,
+			"retweeted": false,
+			"possibly_sensitive": false,
+			"filter_level": "low",
+			"lang": "und",
+			"timestamp_ms": "1476709298523"
+		}
+		
+		]

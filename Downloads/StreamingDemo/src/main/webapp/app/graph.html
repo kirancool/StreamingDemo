@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+  .link line {
+    stroke: #696969;
+  }
+  .link line.separator {
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+  .node circle {
+    stroke: #000;
+    stroke-width: 1.5px;
+  }
+  .node text {
+    font: 10px sans-serif;
+    pointer-events: none;
+  }
+  div.tooltipFocus { 
+    position: absolute;     
+    text-align: center;     
+    width: 60px;          
+    height: 28px;         
+    padding: 2px;       
+    font: 12px sans-serif;    
+    background: lightsteelblue; 
+    border: 0px;    
+    border-radius: 8px;     
+    pointer-events: none;     
+  }
+  div.tooltip {
+    position: absolute;
+    text-align: left;
+    pointer-events: none;
+    width: 400px;
+    padding: 10px;
+    border: 1px solid #D5D5D5;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 1.1em;
+    color: #333;
+    padding: 10px;
+    border-radius: 3px;
+    background: rgba(255,255,255,0.9);
+    color: #000;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+    border:1px solid rgba(200,200,200,0.85);
+  }
+  .header-rule{
+    height:1px;
+    margin:1px auto 3px;
+    margin-top:7px;
+    margin-bottom:7px;
+    background:#ddd;
+    width:125px;
+  }
+  .header1{
+    color:#000;
+    text-transform:uppercase;
+    font-size: 12px;
+    margin-bottom: 2px;
+    text-align:center;
+  }
+  .header2 {
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 2px;
+    color:#666;
+    text-align:center;
+  }
+  .header3 {
+    color:#333;
+    text-align: left;
+    font-size: 15px;
+    font-style: italic;
+    font-family: Georgia;
+    /*  width:170px;*/
+    text-align:center;
+  }
+</style>
+<body>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script> 
+    $(document).ready(function() {
+      $.ajax({
+        url : 'http://localhost:8080/varsha/metadata/graph/getGraphJson',
+        success : function(response){
+          console.log(response);
+          generateGraph($.parseJSON(response));
+        },
+        error : function(){
+        }
+      })
+    })
+    var width,height,color,svg,div,force,link,linkText,node;
+    function generateGraph(graphResponse){
+      width = 1560,
+      height = 1000;
+      color = d3.scale.category20();
+      radius = d3.scale.sqrt()
+      .range([0, 6]);
+      svg = d3.select("body").append("svg")
+      .attr("width", width)
+      .attr("height", height)
+      .on('click',function(e){
+        d3.selectAll(".vz-weighted_tree-tip").remove()
+      });
+      var div = d3.select("body").append("div")
+      .attr("class", "tooltipFocus")       
+      .style("opacity", 0);    
+      var force = d3.layout.force()
+      .size([width, height])
+      .charge(-400)
+      .linkDistance(function(d) { return radius(d.source.size) + radius(d.target.size) + 20; });
+      var graph=graphResponse;
+      var edges=[];
+      graph.links.forEach(function(e) { 
+    // Get the source and target nodes
+    var sourceNode = graph.nodes.filter(function(n) { return n.uuid === e.source; })[0],
+    targetNode = graph.nodes.filter(function(n) { return n.uuid === e.target; })[0];
+    // Add the edge to the array
+    //console.log(sourceNode);
+    edges.push({source: sourceNode, target: targetNode, relationType : e.relationType});
+  });
+      force
+      .nodes(graph.nodes)
+      .links(edges)
+      .linkDistance(200)
+      .on("tick", tick)
+      .start();
+      link = svg.selectAll(".link")
+      .data(edges)
+      .enter().append("g")
+      .attr("class", "link")
+      linkText = svg.selectAll(".link")
+      .append("text")
+      .attr("class", "link-label")
+      .attr("font-family", "Arial, Helvetica, sans-serif")
+      .attr("fill", "Black")
+      .style("font", "normal 12px Arial")
+      .attr("dy", ".35em")
+      .attr("text-anchor", "middle")
+      .text(function(d) {
+        return d.relationType;
+      });    
+      link.append("line")
+      .style("stroke-width", function(d) { return (d.bond * 2 - 1) * 2 + "px"; })
+      node = svg.selectAll(".node")
+      .data(graph.nodes)
+      .enter().append("g")
+      .attr("class", "node")
+      .call(force.drag);
+      node.append("circle")
+      .attr("r", function(d) { return d.nodeType == "User" ? radius(15): radius(8); })
+      .style("stroke-width", 5)    // set the stroke width
+      .style("stroke", "73879C") 
+      .style('fill',function(d){
+        if(d.nodeType=="User")
+          return "#2A3F54";
+        else
+          return "#73879C";
+      })
+      .on("click",function(d){
+        div.transition()    
+        .duration(500)    
+        .style("opacity", 0);
+        createDataTip(d3.event.pageX,d3.event.pageY, d.nodeType, d.name,d.uuid);
+      })
+      .on("mouseover", function(d) {   
+        div.transition()    
+        .duration(200)    
+        .style("opacity", .9);    
+        div .html(d.version)  
+        .style("left", (d3.event.pageX) + "px")   
+        .style("top", (d3.event.pageY - 28) + "px");  
+      })          
+      .on("mouseout", function(d) {   
+        div.transition()    
+        .duration(500)    
+        .style("opacity", 0);
+      });
+      // .style("fill", function(d) { return color(d.title); });
+      node.append("text")
+      .attr("dy", ".35em")
+      .attr("text-anchor", "middle")
+      .attr('class','abe')
+      .style('fill',function(d){return (d.nodeType == 'User' ? 'white':'yellow')})
+      .text(function(d) { return d.name })
+      .style('font-size',function(d){return (d.nodeType == 'User' ? 'larger':'')});
+    }      
+    function tick() {
+      link.selectAll("line")
+      .attr("x1", function(d) { return d.source.x; })
+      .attr("y1", function(d) { return d.source.y; })
+      .attr("x2", function(d) { return d.target.x; })
+      .attr("y2", function(d) { return d.target.y; });
+      linkText
+      .attr("x", function(d) {
+        return ((d.source.x + d.target.x)/2);
+      })
+      .attr("y", function(d) {
+        return ((d.source.y + d.target.y)/2);
+      });    
+      node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+    }
+  
+  var datatip='<div class="tooltip" style="width: 250px; background-opacity:.5">' +
+  '<div class="header1">HEADER1</div>' +
+  '<div class="header-rule"></div>' +
+  '<div class="header2"> HEADER2 </div>' +
+  '<div class="header-rule"></div>' +
+  '<div class="header3"> HEADER3 </div>' +
+  '</div>';
+  function createDataTip(x,y,h1,h2,h3) {
+    html = datatip.replace("HEADER1", h1);
+    html = html.replace("HEADER2", h2);
+    html = html.replace("HEADER3", h3);
+    setTimeout(function(){
+      d3.select("body")
+      .append("div")
+      .attr("class", "vz-weighted_tree-tip")
+      .style("position", "absolute")
+      .style("left", (x) + "px")  
+      .style("top", (y - 28) + "px")
+      .style("opacity",0)
+      .html(html)
+      .transition().style("opacity",1);
+    },100);
+  }
+</script>

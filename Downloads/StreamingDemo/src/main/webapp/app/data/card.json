@@ -1,0 +1,14 @@
+[
+   {
+    "case":"User",
+    "count":"1256"		 
+   },
+   {
+    "case":"Location",
+    "count":"50"		 
+   },
+   {
+    "case":"Twitter",
+    "count":"40"		 
+   }
+ ]
